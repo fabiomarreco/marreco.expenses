@@ -80,6 +80,20 @@ A Transaction is a movement of funds on a account, it can be one of:
     - A Origin Account
     - A Destination Account
 
+> **Transfer**: A transfer has a origin & destination account, which presents a few issues on how to represent the aggregates/entities.
+>- If **Accounts are aggregates w/ transactions**: 
+>   - All transactions are loaded into memory for account.
+>   - Balance is kept natturally through invariants
+>   - A transfer must have a mirror transaction on the other account. 
+>       - Changes to transfers will not have atomicity, other accounts will be impacted w/ messaging
+>- If **Accounts & transactions are both aggregates**
+>   - Transactions can be loaded/updated individually
+>   - Account balance has eventual consistency, updated throughs messaging ?
+>   - Transfers can impact both accounts (single-entry bookeeping)
+>   - Transactions must hold weak reference to accounts.
+>   - Natural visualization of consolidated transaction
+
+
 
 #### Behaviors:
 
