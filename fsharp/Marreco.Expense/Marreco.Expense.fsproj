@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Regex.fs"/>
+    <Compile Include="WrappedString.fs"/>
+    <Compile Include="Types.fs"/>
+    <Compile Include="Parser.fs"/>
+    <Compile Include="Transaction.fs"/>
+    <Compile Include="DomainModel.fs"/>
+  </ItemGroup>
+
+</Project>
